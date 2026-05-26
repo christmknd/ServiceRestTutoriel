@@ -4,6 +4,7 @@
  */
 package com.mycompany.mathswebservice;
 
+import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -23,13 +24,31 @@ public class CalculsSimples {
         return "Hello " + txt + " !";
     }
 
-    /**
-     * Web service operation
-     */
+  
     @WebMethod(operationName = "additionner")
     public Double additionner(@WebParam(name = "nombreA") double nombreA, @WebParam(name = "nombreB") double nombreB) {
         //TODO write your implementation code here:
         return nombreA + nombreB;
     }
+    
+    
+
+ 
+    @WebMethod(operationName = "premier")
+    public int premier(@WebParam(name = "entier") int entier) {
+        //TODO write your implementation code here:
+        return 0;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "decomposer")
+    public List decomposer(@WebParam(name = "entier") int entier) {
+        //TODO write your implementation code here:
+        return null;
+    }
+    
+    
     
 }
