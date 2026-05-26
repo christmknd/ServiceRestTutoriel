@@ -4,6 +4,7 @@
  */
 package com.mycompany.mathswebservice;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -32,23 +33,45 @@ public class CalculsSimples {
     }
     
     
-
- 
-    @WebMethod(operationName = "premier")
-    public int premier(@WebParam(name = "entier") int entier) {
-        //TODO write your implementation code here:
-        return 0;
-    }
-
-    /**
+      /**
      * Web service operation
      */
     @WebMethod(operationName = "decomposer")
     public List decomposer(@WebParam(name = "entier") int entier) {
         //TODO write your implementation code here:
-        return null;
+        List l = new ArrayList();
+        int i=2;
+        while(i<entier){
+            if(entier %i ==0){
+                l.add(i);
+                entier=entier/i;
+            } else 
+                i++;
+        }
+        return l;
     }
     
+
+ 
+    @WebMethod(operationName = "premier")
+    public boolean premier(@WebParam(name = "entier") int entier) {
+        return decomposer(entier).size()==1;
+    }
+    
+    
+    public static void main(String[] args){
+
+    CalculsSimples m = new CalculsSimples();
+
+    System.out.println("premier 8 ? " + m.premier(8));
+    System.out.println("premier 5 ? " + m.premier(5));
+
+    System.out.println("decomposer 8 : " + m.decomposer(8));
+    System.out.println("decomposer 362880 :" + m.decomposer(362880));
+
+}
+
+  
     
     
 }
