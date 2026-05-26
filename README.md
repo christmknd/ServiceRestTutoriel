@@ -99,7 +99,3 @@ System.out.println(decomposer(12));
 ```
 
 ---
-
-## Auteur
-
-Projet réalisé dans le cadre d’un tutoriel Java Web Services.
