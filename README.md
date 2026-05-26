@@ -46,3 +46,22 @@ Vérifie si un nombre est premier.
 ```bash
 /Users/dev/glassfish5/glassfish/bin/asadmin start-domain
 ```
+
+Depuis NetBeans :
+
+- Clean and Build
+- Run Project
+
+## Accès au Web Service
+
+### WSDL
+
+```text
+http://localhost:8080/MathsWebService/CalculsSimples?wsdl
+```
+
+### Console d’administration GlassFish
+
+```text
+http://localhost:4848
+```
